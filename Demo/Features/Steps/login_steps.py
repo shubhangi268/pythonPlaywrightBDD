@@ -14,7 +14,7 @@ async def login(context):
     #Starting Playwright
     context.playwright = await async_playwright().start()
     #Launching the browser
-    context.browser = await context.playwright.chromium.launch(headless=True, slow_mo=1000)
+    context.browser = await context.playwright.chromium.launch(headless=False, slow_mo=1000)
     # Opening a new web browser
     context.page = await context.browser.new_page()
 
